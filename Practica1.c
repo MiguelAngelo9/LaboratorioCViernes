@@ -26,6 +26,20 @@ printf("\nEl resultado es: %d", resultado);
 
 /*Hacemos las respectivas operaciones y imprimimos el resultado final*/
 
+/*Aqui empiezo el segundo ejericcio*/
+printf("\n\n");
+int b, resfinal = 0;
+/*Declarar variables*/
+printf("\nIngrese un valor para b:", b);
+scanf("%d", &b);
+
+printf("El  numero ingresado es: ", b);
+
+resfinal = (6((b + 1) /(8)) - ((2*b) -(3)) / (16));
+printf("\nEl resfinal es: %d", resfinal); 
+/*Hacemos las operaciones y sacamos el resultado, sustituimos y listo*/
+
+
 return 0;
 }
 
