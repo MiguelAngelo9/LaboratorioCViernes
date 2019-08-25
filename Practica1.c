@@ -39,6 +39,18 @@ resfinal = (6((b + 1) /(8)) - ((2*b) -(3)) / (16));
 printf("\nEl resfinal es: %d", resfinal); 
 /*Hacemos las operaciones y sacamos el resultado, sustituimos y listo*/
 
+/*Actividad 2 Hacer una aplicacion en dado el input, mostrar el output de 2 funciones algebraicas*/
+
+int c, Res = 0;
+
+printf("Introducir un valor para c: ", c);
+scanf("%d", &c);
+
+printf("El numero ingresado es: ", c);
+
+res = ((2/3) []c - (1- (c-2) / (3)] + 1);
+printf("\nEl res es: %d", res);
+
 
 return 0;
 }
