@@ -11,7 +11,9 @@
 
 int main(int argc, char *argv[]) {
 /*********************************************************************ACTIVIDAD #1**********************************************************************/
-    printf("\t\tActividad #1");
+    /*aqui simplemente hay que ingresar cualquier cadena de 10 caracteres, verificar si se escribe igual al inverso, y si es asi
+    entonces imprimir que es palindromo, sino entonces negar que es uno*/
+	printf("\t\tActividad #1");
 	char p[200];
     int e, s;
     int palindromo = 1;
@@ -20,11 +22,11 @@ int main(int argc, char *argv[]) {
     gets(p);
     s=strlen(p)-1;
     for(e=0; e<strlen(p)/2; e++, s--) {
-        printf("\n\nComprobando %c==%c\n", *(p+e), *(p+s));
-        if (*(p+e)!=*(p+s)) {
-            palindromo = 0;
-            break;
-        }
+    printf("\n\nComprobando %c==%c\n", *(p+e), *(p+s));
+    if (*(p+e)!=*(p+s)) {
+    palindromo = 0;
+    break;
+    }
     }
     if (palindromo)
         printf("\nEs un palindromo");
@@ -33,7 +35,9 @@ int main(int argc, char *argv[]) {
 /*******************************************************************************************************************************************************/
 
 /************************************************************************ACTIVIDAD #2*******************************************************************/
-    printf("\n\n\n\t\tActividad #2");
+    /*El programa recibe la cadena que ingrese el usuario y empieza a verificar si vienen las letras que especifique y las cuenta, para alfinal imprimir 
+    un resultado, con las veces que se repite cada una*/
+	printf("\n\n\n\t\tActividad #2");
 	int lon;
 	char c[20];
 	char l = 'a';
@@ -48,35 +52,35 @@ int main(int argc, char *argv[]) {
 	lon=strlen(c);
 
 	for(i=0;i<lon;i++){
-		if(c[i]==l){
-			j++;
-		}
+	if(c[i]==l){
+	j++;
+	}
 	}
 	for(t=0;t<lon;t++){
-		if(c[t]==l2){
-			t2++;
-		}
+	if(c[t]==l2){
+	t2++;
+	}
 	}
 	for(z=0;z<lon;z++){
-		if(c[z]==l3){
-			z2++;
-		}
+	if(c[z]==l3){
+	z2++;
+	}
 	}
 	for(g=0;g<lon;g++){
-		if(c[g]==l4){
-			g2++;
-		}
+	if(c[g]==l4){
+	g2++;
+	}
 	}
 	for(f=0;f<lon;f++){
-		if(c[f]==l5){
-			f2++;
-		}
+	if(c[f]==l5){
+	f2++;
 	}
-	printf("\nLa letra %c aparece %i veces\n",l,j);
-	printf("\nLa letra %c aparece %i veces\n",l2,t2);
-	printf("\nLa letra %c aparece %i veces\n",l3,z2);
-	printf("\nLa letra %c aparece %i veces\n",l4,g2);
-	printf("\nLa letra %c aparece %i veces\n",l5,f2);
+	}
+	printf("\nLa letra %c se repite %i veces\n",l,j);
+	printf("\nLa letra %c se repite %i veces\n",l2,t2);
+	printf("\nLa letra %c se repite %i veces\n",l3,z2);
+	printf("\nLa letra %c se repite %i veces\n",l4,g2);
+	printf("\nLa letra %c se repite %i veces\n",l5,f2);
 	
 	return 0;
 }
