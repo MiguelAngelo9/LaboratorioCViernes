@@ -7,75 +7,46 @@
 *Matricula: 1822515
 *Grupo: LaboratorioCViernes
 *Fecha: 01-11-2019
+*Horario: 7am-9am
 */
-void FuncionV(){
-	int lon;
-	char c[100];
-	char l='a';
-	char l2='e';
-	char l3='i';
-	char l4='o';
-	char l5='u';
-	int i, t, z, g, f, i2, t2, z2, g2, f2;
-	i2=0; t2=0; z2=0; g2=0; f2=0;
-	for(i=0;i<lon;i++){
-	if(c[i]==l){
-	i2++;
+int cv(char *cadena){
+	int vocales=0;
+	int indice=0; /*indice para contar vocales*/
+	for(indice = 0; cadena[indice] != '\0'; ++indice){
+	char lv=tolower(cadena[indice]);
+    if (
+	lv=='a'|| 
+	lv=='e'|| 
+	lv=='i'|| 
+	lv=='o'|| 
+	lv=='u'
+	)
+	{
+	vocales++; /*un contador*/
 	}
 	}
-	for(t=0;t<lon;t++){
-	if(c[t]==l2){
-	t2++;
-	}
-	}
-	for(z=0;z<lon;z++){
-	if(c[z]==l3){
-	z2++;
-	}
-	}
-	for(g=0;g<lon;g++){
-	if(c[g]==l4){
-	g2++;
-	}
-	}
-	for(f=0;f<lon;f++){
-	if(c[f]==l5){
-	f2++;
-	}
-	}
-	return;
-};
+	return vocales; /*para que me regrese las voles que hay*/
+}
 int main(int argc, char *argv[]) {
 	printf("\t\tActividad #1");
-	char c[100];
-	int lon;
-	int i, t, z, g, f, i2, t2, z2, g2, f2;
-	i=0; t=0; z=0; g=0; f=0; i2=0; t2=0; z2=0; g2=0; f2=0;
-	printf("\n\nIngrese su cadena: ");
-	scanf("%s", &c);
-	lon=strlen(c);
-	printf("\n\nLa vocal %c se repite %d veces\n", i, i2);
-	printf("\n\nLa vocal %c se repite %d veces\n", t, t2);
-	printf("\n\nLa vocal %c se repite %d veces\n", z, z2);
-	printf("\n\nLa vocal %c se repite %d veces\n", g, g2);
-	printf("\n\nLa vocal %c se repite %d veces\n", f, f2);
-	FuncionV();
+	char ent[100]; /*char por que es una cadena*/
+	printf("\n\nIngrese una cadena: ");
+	gets(ent);
+	int vocales= cv(ent);
+	printf("\n\nEl numero de vocales que tiene la cadena es: %d\n", vocales);
 	/*************************************************************TERMINANDO ACTIVIDAD #1******************************************/
-	printf("\n\n\n");
+	int r=0;
+	printf("Ingrese un numero para pasar a la sig actividad: ");
+	scanf("%d", &r);
 	/*************************************************************ACTIVIDAD #2*****************************************************/
-		printf("\n\n\t\tActividad #2");
-	int e, s;
-	e=0; s=0;
-	int *r, *b;
-	*r=&e;
-	*b=&s;
-	int sum=0;
-	printf("\n\nIngrese un valor entero para la primer variable: ");
-	scanf("%d", &e);
-	printf("\n\nIngrese un valor entero para la segunda variable: ");
-	scanf("%d", &s);
-	printf("\n\nSus variables son: %d y %d", e, s);
-	sum=(e+s);
-	printf("\n\nLa suma de sus dos variables es: *r+*b");
+	("\n\n\t\tActividad #2");
+	int a, b, c;
+   int *p1, *p2, *p3; /*declaracion de punteros*/
+   printf("Ingrese el valor de a:\n");
+   scanf("%d", &a);
+   printf("Ahora el valor de b:\n");
+   scanf("%d", &b);
+   c=a+b; /*suma de punteros*/
+   printf("a+b=%d\n", c);
 	return 0;
-}
+} 
